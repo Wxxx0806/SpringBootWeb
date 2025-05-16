@@ -1,7 +1,7 @@
 package com.wx.controller;
 
-import com.wx.user.Address;
-import com.wx.user.Result;
+import com.wx.Pojo.Address;
+import com.wx.Pojo.Result;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

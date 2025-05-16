@@ -1,4 +1,4 @@
-package com.wx.user;
+package com.wx.Pojo;
 
 public class User {
     protected String name;

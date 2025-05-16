@@ -1,4 +1,4 @@
-package com.wx.user;
+package com.wx.Pojo;
 
 public class Address {
     protected String country;

@@ -1,7 +1,6 @@
 package com.wx.controller;
 
-import com.wx.user.Address;
-import com.wx.user.User;
+import com.wx.Pojo.User;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
