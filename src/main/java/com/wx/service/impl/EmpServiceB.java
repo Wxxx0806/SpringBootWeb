@@ -2,18 +2,14 @@ package com.wx.service.impl;
 
 import com.wx.Pojo.Emp;
 import com.wx.dao.EmpDao;
-import com.wx.dao.impl.EmpDaoA;
 import com.wx.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
 @Service //控制反转的操作
-public class EmpServiceA implements EmpService {
+public class EmpServiceB implements EmpService {
 
     @Autowired //依赖注入的操作
     private EmpDao empDao;
@@ -28,9 +24,9 @@ public class EmpServiceA implements EmpService {
             //处理性别 1: 男, 2: 女
             String gender = emp.getGender();
             if ("1".equals(gender)) {
-                emp.setGender("男");
+                emp.setGender("男士");
             } else if ("2".equals(gender)) {
-                emp.setGender("女");
+                emp.setGender("女士");
             }
 
             //处理职业

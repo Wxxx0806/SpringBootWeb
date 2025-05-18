@@ -5,7 +5,10 @@ import com.wx.Pojo.Result;
 import com.wx.dao.EmpDao;
 import com.wx.service.EmpService;
 import com.wx.service.impl.EmpServiceA;
+import com.wx.service.impl.EmpServiceB;
 import com.wx.utils.XmlParserUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,7 +17,9 @@ import java.util.List;
 @RestController
 public class EmpController {
 
-    private EmpService empService=new EmpServiceA();
+    @Autowired //依赖注入的操作
+    @Qualifier(value = "empServiceB")
+    private EmpService empService;
 
     @RequestMapping("/listEmp")
     public Result list() {
